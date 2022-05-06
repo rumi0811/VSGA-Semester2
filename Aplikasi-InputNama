@@ -1,0 +1,83 @@
+----------------------------------------------------untuk activity_main.xml----------------------------------------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Lbl_Nama"
+        android:id="@+id/Lbl_Nama"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Lbl_Nama"
+        android:id="@+id/TxtNama"
+        android:inputType="none"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtNama"
+        android:text="@string/Btn_Tampil_Nama"
+        android:id="@+id/BtnTampil"
+        android:onClick="TampilNama"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Label2"
+        android:textSize="20sp"
+        android:layout_below="@+id/BtnTampil"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:padding="5dp"/>
+
+</RelativeLayout>
+
+----------------------------------------------------untuk MainActivity.java----------------------------------------------------------
+
+package com.example.aplikasimobileinputnama;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+
+    EditText TextNama;
+    TextView Hasil;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        TextNama=(EditText)findViewById(R.id.TxtNama);
+        Hasil=(TextView)findViewById(R.id.Lbl_Nama);
+    }
+
+    public void TampilNama(View v){
+        Hasil.setText("Nama Anda : "+TextNama.getText());
+    }
+}
+
+----------------------------------------------------untuk strings.xml----------------------------------------------------------
+
+<resources>
+    <string name="app_name">Aplikasi Mobile Input Nama</string>
+    <string name="Lbl_Nama">Masukkan Nama Anda</string>
+    <string name="Btn_Tampil_Nama">Tampilkan</string>
+</resources>

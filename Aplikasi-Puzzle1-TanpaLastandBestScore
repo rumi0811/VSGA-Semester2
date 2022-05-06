@@ -1,0 +1,461 @@
+//------------------------------------------------------------------------------------------------------untuk activity_main.xml---------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Game"
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/button_start_game"/>
+    </LinearLayout>
+
+</FrameLayout>
+
+//------------------------------------------------------------------------------------------------------untuk activity_game.xml---------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_view_steps"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Steps: 0"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/text_view_time"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Time : 00:00:00"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/group"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button1"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:tag="00"
+            android:text="A"/>
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/ButtonStyle"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/button1"
+            android:tag="01"
+            android:text="B" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button3"
+            android:layout_toEndOf="@id/button2"
+            android:layout_alignParentTop="true"
+            android:tag="02"
+            android:text="C"/>
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/button4"
+            android:layout_toEndOf="@id/button3"
+            android:layout_alignParentTop="true"
+            android:tag="03"
+            android:text="D"/>
+
+        <Button
+            android:id="@+id/button5"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button1"
+            android:layout_marginTop="0dp"
+            android:tag="10"
+            android:text="E" />
+
+        <Button
+            android:id="@+id/button6"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button1"
+            android:layout_toEndOf="@id/button1"
+            android:tag="11"
+            android:text="F" />
+
+        <Button
+            android:id="@+id/button7"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button1"
+            android:layout_toEndOf="@id/button2"
+            android:tag="12"
+            android:text="G" />
+
+        <Button
+            android:id="@+id/button8"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button1"
+            android:layout_toEndOf="@id/button3"
+            android:tag="13"
+            android:text="H" />
+
+        <Button
+            android:id="@+id/button9"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button5"
+            android:tag="20"
+            android:text="I" />
+
+        <Button
+            android:id="@+id/button10"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button5"
+            android:layout_toEndOf="@id/button9"
+            android:tag="21"
+            android:text="J" />
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button5"
+            android:layout_toEndOf="@id/button10"
+            android:tag="22"
+            android:text="K" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button5"
+            android:layout_toEndOf="@id/button11"
+            android:tag="23"
+            android:text="L" />
+
+        <Button
+            android:id="@+id/button13"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button9"
+            android:tag="30"
+            android:text="M" />
+
+        <Button
+            android:id="@+id/button14"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button9"
+            android:layout_toEndOf="@id/button13"
+            android:tag="31"
+            android:text="N" />
+
+        <Button
+            android:id="@+id/button15"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button9"
+            android:layout_toEndOf="@id/button14"
+            android:tag="32"
+            android:text="O" />
+
+        <Button
+            android:id="@+id/button16"
+            style="@style/ButtonStyle"
+            android:layout_below="@id/button9"
+            android:layout_toEndOf="@id/button3"
+            android:tag="33"
+            android:text=""
+            android:background="@color/colorFreeButton"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+       android:layout_gravity="bottom">
+        <Button
+            android:id="@+id/button_shuffle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Shuffle" />
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Stop" />
+    </LinearLayout>
+</FrameLayout>
+
+//------------------------------------------------------------------------------------------------------untuk colors.xml---------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorFreeButton">#0003DAC5</color>
+</resources>
+
+//------------------------------------------------------------------------------------------------------untuk style.xml---------------------------------------------
+
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/design_default_color_primary</item>
+        <item name="colorPrimaryDark">@color/design_default_color_primary_dark</item>
+        <item name="colorAccent">@color/design_default_color_secondary</item>
+    </style>
+    <style name="ButtonStyle">
+
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:onClick">buttonClick</item>
+    </style>
+</resources>
+
+//------------------------------------------------------------------------------------------------------untuk MainActivity.java---------------------------------------------
+
+package com.example.myapplication_p;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private Button buttonStartGame;
+    public static final int REQUEST_CODE = 1;
+    private TextView textLastStep;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        buttonStartGame = findViewById(R.id.button_start_game);
+        buttonStartGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(MainActivity.this, GameActivity.class), REQUEST_CODE);
+            }
+        });
+    }
+}
+
+//------------------------------------------------------------------------------------------------------untuk GameActivity.java---------------------------------------------
+
+package com.example.myapplication_p;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
+
+public class GameActivity extends AppCompatActivity {
+
+    private int emptyX = 3;
+    private int emptyY = 3;
+    private RelativeLayout group;
+    private Button[][] buttons;
+    private int[] tiles;
+    private TextView textViewSteps;
+    private int stepCount=0;
+    private TextView textViewTime;
+    private Timer timer;
+    private int timeCount=0;
+    private Button buttonShuffle;
+    private Button buttonStop;
+    private boolean isTimeRunning;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_game);
+        loadViews();
+        loadNumber();
+        generateNumbers();
+        loadDataToViews();
+    }
+
+    private void loadDataToViews() {
+        emptyX = 3;
+        emptyY = 3;
+        for (int i = 0; i < group.getChildCount() - 1; i++) {
+            buttons[i / 4][i % 4].setText(String.valueOf(tiles[i]));
+            buttons[i / 4][i % 4].setBackgroundResource(android.R.drawable.btn_default);
+        }
+        buttons[emptyX][emptyY].setText("");
+        buttons[emptyX][emptyY].setBackgroundColor(ContextCompat.getColor(this, R.color.colorFreeButton));
+    }
+    private void generateNumbers() {
+        int n = 15;
+        Random random = new Random();
+        while (n > 1) {
+            int randomNum = random.nextInt(n--);
+            int temp = tiles[randomNum];
+            tiles[randomNum] = tiles[n];
+            tiles[n] = temp;
+        }
+        if (!isSolvable())
+            generateNumbers();
+    }
+    private boolean isSolvable() {
+        int countInversions = 0;
+        for (int i = 0; i < 15; i++) {
+            for (int j = 0; j < i; j++) {
+                if (tiles[j] > tiles[i])
+                    countInversions++;
+            }
+        }
+        return countInversions % 2 == 0;
+    }
+
+
+    private void loadNumber() {
+        tiles = new int[16];
+        for (int i = 0; i < group.getChildCount() - 1; i++) {
+            tiles[i] = i + 1;
+        }
+    }
+    private void loadTimer(){
+
+        isTimeRunning=true;
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                timeCount++;
+                setTime(timeCount);
+            }
+        }, 1000, 1000);
+    }
+
+    private void setTime(int timeCount){
+        int second = timeCount%60;
+        int hour = timeCount/3600;
+        int minute = (timeCount - hour*3600)/60;
+
+        textViewTime.setText(String.format("Time: %02d:%02d:%02d", hour, minute, second));
+
+    }
+
+    private void loadViews() {
+        group = findViewById(R.id.group);
+        textViewSteps=findViewById(R.id.text_view_steps);
+        textViewTime=findViewById(R.id.text_view_time);
+        buttonShuffle=findViewById(R.id.button_shuffle);
+        buttonStop = findViewById(R.id.button_stop);
+
+
+        loadTimer();
+        buttons = new Button[4][4];
+
+        for (int i = 0; i < group.getChildCount(); i++) {
+            buttons[i / 4][i % 4] = (Button) group.getChildAt(i);
+        }
+
+        buttonShuffle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                generateNumbers();
+                loadDataToViews();
+            }
+        });
+        buttonStop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(isTimeRunning){
+                    timer.cancel();
+                    buttonStop.setText("Resume");
+                    isTimeRunning=false;
+                    for (int i = 0; i < group.getChildCount(); i++) {
+                        buttons[i/4][i%4].setClickable(false);
+                    }
+                }else {
+                    loadTimer();
+                    buttonStop.setText("Stop");
+                    for (int i = 0; i < group.getChildCount(); i++) {
+                        buttons[i/4][i%4].setClickable(true);
+                    }
+                }
+            }
+        });
+
+    }
+    public void buttonClick(View view) {
+        Button button = (Button) view;
+        int x = button.getTag().toString().charAt(0) - '0';
+        int y = button.getTag().toString().charAt(1) - '0';
+        if ((Math.abs(emptyX - x) == 1 && emptyY == y) || (Math.abs(emptyY - y) == 1 && emptyX == x)) {
+            buttons[emptyX][emptyY].setText(button.getText().toString());
+            buttons[emptyX][emptyY].setBackgroundResource(android.R.drawable.btn_default);
+            button.setBackgroundColor(ContextCompat.getColor(this, R.color.colorFreeButton));
+            emptyX = x;
+            emptyY = y;
+            stepCount++;
+            textViewSteps.setText("Steps: "+stepCount);
+            checkWin();
+        }
+    }
+    private void checkWin() {
+        boolean isWin = false;
+        if (emptyX == 3 && emptyY == 3) {
+            for (int i = 0; i < group.getChildCount() - 1; i++) {
+                if (buttons[i / 4][i % 4].getText().toString().equals(String.valueOf(i + 1))) {
+                    isWin = true;
+                } else {
+                    isWin = false;
+                    break;
+                }
+            }
+        }
+
+        if (isWin) {
+            Toast.makeText(this, "WIN!!!\n Steps: "+stepCount, Toast.LENGTH_SHORT).show();
+            for (int i = 0; i < group.getChildCount(); i++) {
+                buttons[i / 4][i % 4].setClickable(false);
+            }
+            timer.cancel();
+            buttonShuffle.setClickable(false);
+            buttonStop.setClickable(false);
+        }
+    }
+}
